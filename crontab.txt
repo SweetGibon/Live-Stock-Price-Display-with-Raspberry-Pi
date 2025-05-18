@@ -1,4 +1,5 @@
-15 6 * * 1-5 /usr/bin/python3 /home/tapsemi/normal_mode.py && /home/tapsemi/start_stock_display.sh & >> /home/tapsemi/cron.log 2>&1
-0 10 * * 1-5 /usr/bin/pkill -f "/home/tapsemi/stock_ticker.py" && /usr/bin/python3 /home/tapsemi/low_power_mode.py >> /home/tapsemi/cron.log 2>&1
-05 10 * * 1-5 /usr/bin/python3 /home/tapsemi/low_power_mode.py
+# Replace /****/ with your username(under the home directory)
+15 6 * * 1-5 /usr/bin/python3 /home/****/normal_mode.py && /home/****/start_stock_display.sh & >> /home/****/cron.log 2>&1
+0 10 * * 1-5 /usr/bin/pkill -f "/home/****/stock_ticker.py" && /usr/bin/python3 /home/****/low_power_mode.py >> /home/****/cron.log 2>&1
+05 10 * * 1-5 /usr/bin/python3 /home/****/low_power_mode.py
 
