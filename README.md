@@ -1,17 +1,51 @@
-# Stock Price Display System
-This program creates a stock ticker display using a Raspberry Pi and a connected display. The software is written in Python and utilizes the Pygame library for graphics and the finance library to fetch real-time stock data.
-The program displays stock information for five major tech companies: Apple, Google, Microsoft, Amazon, and Meta (formerly Facebook). It shows each stock's symbol, current price, and percentage change. The stock data is updated every 60 seconds to ensure relatively current information. You can choose any US-listed stocks and any number of stocks you want.
+Live Stock Price Display on Raspberry Pi
+This repository lets you build a real-time stock ticker display system using a Raspberry Pi board and a Raspberry Pi display. Written in Python, it uses Pygame for scrolling graphics and fetches live market data from Alpha Vantage.
+Perfect for DIY finance enthusiasts, this display shows real-time price updates for any number of US-listed stocks, including symbols, current prices, and percentage changes. It’s ideal for building a home stock ticker, IoT finance display, or Raspberry Pi market dashboard.
 
-The display runs in full-screen mode, with the stock information scrolling from right to left across the screen. Positive price changes are shown in green, while negative changes appear in red. The scrolling speed can be adjusted by modifying the scroll_speed variable.
+Features
+•	Real-time stock prices from Alpha Vantage API
+•	Supports custom stock symbols (e.g., AAPL, GOOGL, MSFT, AMZN, META)
+•	Color-coded price changes: green (up), red (down)
+•	Smooth scrolling ticker using Pygame
+•	Auto-refreshes data every 60 seconds
+•	Configurable scrolling speed
+•	Low-power mode outside market hours
+•	Automatically starts at 6:15am PT and stops at 10:00am PT using crontab and bash scripts
 
-To start, first look at the hardware components document and purchase the necessary components.
 
-Next, follow the instructions in the file "System Software Setup". 
+Hardware Requirements
+Before getting started, refer to the Hardware Components document to purchase the necessary parts. At a minimum, you'll need:
+•	Raspberry Pi 3B+, 4, or later
+•	External display (e.g., HDMI screen or Raspberry Pi Display)
+•	Power supply
+•	Network connection (Wi-Fi or Ethernet)
 
-Since you will be logging in to the system multiple times, it is better to download and install Putty. Once installed, follow the prompts in the file "Program the System", Steps 1 - 2. Now you need to have the "stock_ticker.py" file. You can download the file, open it in the text / document viewer in your computer and copy the content. Next from the command window connected to the Raspberry Pi, execute Step 3. 
+Setup Instructions
+1.	Install Required Software
+Follow the instructions in the System Software Setup file to install Python, Pygame, and other dependencies.
+2.	Remote Access Setup
+Install PuTTY for easy SSH access to your Raspberry Pi.
+Follow Steps 1–2 in Program the System.
+3.	Get the Stock Ticker Script
+Download or copy the contents of stock_ticker.py.
+Save it to your Raspberry Pi.
+4.	Get Your Free Alpha Vantage API Key
+Follow instructions in the Alpha Vantage API file.
+Enter the API key in your stock_ticker.py file where indicated.
+5.	Run the Script “python nano stock_ticker.py”
 
-Now you also need to have a free API Key from Alpha Vantage that you need to enter in the stock_ticker.py file. Please open up the file "Alpha Vantage API" file and follow the instructions. Once you receive the key, enter it in the appropriate line in the stock_ticker.py file. 
+Automation (Optional)
+To automatically start and stop the program during U.S. market hours (6:15 AM – 1:00 PM PT):
+•	Review and install the provided crontab entries and shell scripts.
+•	These will:
+	Launch the script each morning
+	Kill it after market close
+	Put the system into low-power mode during off hours
 
-If you have done everything correctly, you can run "python nano stock_ticker.py". Good Luck.
-
-Also, there are a few additional files. We wanted the program to launch automatically at 6:15am PT and be killed at 10:00am PT. The system should stay in low-power mode during the time it is not running. This was done by executing a few additional programs / bash scripts, controlled by crontab. The crontab file contents clearly explain the process.
+Project Files
+•	stock_ticker.py: Core Python script for the stock ticker
+•	System Software Setup: Steps for configuring Raspberry Pi
+•	Hardware Components: Required parts list
+•	Alpha Vantage API: How to get and use your API key
+•	Program the System: SSH & execution steps
+•	crontab + Scripts: For automation & power management
