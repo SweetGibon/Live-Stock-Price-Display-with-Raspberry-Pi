@@ -1,6 +1,8 @@
 # Stock Price Display System
 This program creates a stock ticker display using a Raspberry Pi and a connected display. The software is written in Python and utilizes the Pygame library for graphics and the finance library to fetch real-time stock data.
 The program displays stock information for five major tech companies: Apple, Google, Microsoft, Amazon, and Meta (formerly Facebook). It shows each stock's symbol, current price, and percentage change. The stock data is updated every 60 seconds to ensure relatively current information. You can choose any US-listed stocks and any number of stocks you want.
+
 The display runs in full-screen mode, with the stock information scrolling from right to left across the screen. Positive price changes are shown in green, while negative changes appear in red. The scrolling speed can be adjusted by modifying the scroll_speed variable.
+
 To start, first look at the hardware components document and purchase the necessary components.
 
