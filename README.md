@@ -1,5 +1,7 @@
 Live Stock Price Display on Raspberry Pi
+
 This repository lets you build a real-time stock ticker display system using a Raspberry Pi board and a Raspberry Pi display. Written in Python, it uses Pygame for scrolling graphics and fetches live market data from Alpha Vantage.
+
 Perfect for DIY finance enthusiasts, this display shows real-time price updates for any number of US-listed stocks, including symbols, current prices, and percentage changes. It’s ideal for building a home stock ticker, IoT finance display, or Raspberry Pi market dashboard.
 
 Features
