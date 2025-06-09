@@ -5,6 +5,7 @@ This repository lets you build a real-time stock ticker display system using a R
 Perfect for DIY finance enthusiasts, this display shows real-time price updates for any number of US-listed stocks, including symbols, current prices, and percentage changes. It’s ideal for building a home stock ticker, IoT finance display, or Raspberry Pi market dashboard.
 
 Features
+
 •	Real-time stock prices from Alpha Vantage API
 •	Supports custom stock symbols (e.g., AAPL, GOOGL, MSFT, AMZN, META)
 •	Color-coded price changes: green (up), red (down)
