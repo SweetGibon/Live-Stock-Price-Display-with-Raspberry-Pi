@@ -7,12 +7,19 @@ Perfect for DIY finance enthusiasts, this display shows real-time price updates 
 Features
 
 •	Real-time stock prices from Alpha Vantage API
+
 •	Supports custom stock symbols (e.g., AAPL, GOOGL, MSFT, AMZN, META)
+
 •	Color-coded price changes: green (up), red (down)
+
 •	Smooth scrolling ticker using Pygame
+
 •	Auto-refreshes data every 60 seconds
+
 •	Configurable scrolling speed
+
 •	Low-power mode outside market hours
+
 •	Automatically starts at 6:15am PT and stops at 10:00am PT using crontab and bash scripts
 
 
